@@ -17,7 +17,7 @@ export default {
         "secondary-400": "#FFCD58",
         "secondary-500": "#FFC132",
       },
-      backgroundImage: (theme) => ({
+      backgroundImage: () => ({
         "gradient-yellowred" : "linear-gradient(90deg 0%, #FFC837 100%)",
         "mobile-home" : "url('./src/assets/HomePageGraphic.png')"
       }),
