@@ -14,16 +14,17 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
   const {
     register,
-    trigger,
+    // trigger,
+    getValues,
     formState: { errors },
   } = useForm();
 
+  
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = async (e: any) => {
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
-    }
+    e.preventDefault()
+    const formData = getValues();
+      console.log(formData);
   };
 
   return (
@@ -67,10 +68,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             }}
           >
             <form
-              target="_blank"
+              // target="_blank"
               onSubmit={onSubmit}
-              action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
-              method="POST"
+              // action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
+              // method="POST"
             >
               <input
                 className={inputStyles}
